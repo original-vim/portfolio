@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive CV</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <a href="index.html"></a>
+    <style>
+      /* General Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background-color: #f4f4f4;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 20px auto;
+        background: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        border-radius: 8px;
+      }
+
+      /* Header Section */
+      .header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .header h1 {
+        font-size: 32px;
+        color: #333;
+      }
+
+      .header p {
+        color: #555;
+        font-size: 14px;
+      }
+
+      .section-title {
+        background: #ccc;
+        padding: 5px 10px;
+        margin: 10px 0;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #333;
+        border-left: 5px solid #444;
+      }
+
+      /* Summary */
+      .summary {
+        margin-bottom: 20px;
+      }
+
+      /* Work Experience */
+      .work-experience,
+      .skills,
+      .education {
+        margin-bottom: 20px;
+      }
+
+      .job {
+        margin-bottom: 15px;
+      }
+
+      .job h3 {
+        color: #444;
+        font-size: 18px;
+      }
+
+      .job p {
+        font-size: 14px;
+        color: #555;
+      }
+
+      /* Skills Section */
+      .skills ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .skills ul li {
+        background: #f2f2f2;
+        margin: 5px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 14px;
+      }
+
+      /* Education */
+      .education h4 {
+        color: #444;
+        font-size: 16px;
+      }
+
+      .contact h4 {
+        color: #444;
+        font-size: 16px;
+      }
+
+      /* Contact Section */
+      .contact {
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      .contact h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      .contact a {
+        text-decoration: none;
+        color: #555;
+        margin: 10px 15px;
+        display: inline-block;
+        font-size: 16px;
+      }
+
+      .contact i {
+        font-size: 24px;
+        color: #444;
+        transition: color 0.3s ease-in-out;
+      }
+
+      .contact i:hover {
+        color: #0077b5; /* LinkedIn/primary blue color on hover */
+      }
+
+      /* Bottom Arrow */
+      .bottom-arrow {
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      .bottom-arrow a {
+        color: #444;
+        font-size: 30px;
+        text-decoration: none;
+      }
+
+      .bottom-arrow a:hover {
+        color: #0077b5;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .header h1 {
+          font-size: 24px;
+        }
+
+        .contact a {
+          margin: 5px 10px;
+          font-size: 14px;
+        }
+
+        .contact i {
+          font-size: 20px;
+        }
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .header h1 {
+          font-size: 24px;
+        }
+
+        .job h3,
+        .education h4 {
+          font-size: 16px;
+        }
+
+        .skills ul li {
+          font-size: 12px;
+        }
+        .header h1 {
+          font-size: 24px;
+        }
+
+        .contact a {
+          margin: 5px 10px;
+          font-size: 14px;
+        }
+
+        .contact i {
+          font-size: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div class="header">
+        <h1>VIM MAGAR</h1>
+        <p>
+          vim.magar@example.co.uk | 9810567505 | Nepal, ithari-9, Bansbari
+          street
+        </p>
+      </div>
+
+      <!-- Professional Summary -->
+      <div class="summary">
+        <div class="section-title">Professional Summary</div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+          molestiae tenetur perferendis expedita labore in neque eum iure nihil
+          eius explicabo minus voluptatibus officia, veritatis saepe, qui culpa
+          distinctio quis! Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Beatae a consequuntur libero nam. Veniam, laboriosam odit,
+          officia qui cumque eligendi, nobis illo recusandae atque sunt ipsam
+          velit magni. Hic, dolores?
+        </p>
+      </div>
+
+      <!-- Work Experience -->
+      <div class="work-experience">
+        <div class="section-title">Work History</div>
+
+        <div class="job">
+          <h3>Agust 2024 - Current | Begginer front-end</h3>
+          <p>YOUTH-IT</p>
+          <ul>
+            <li>
+              Aligned technical solutions with desired business outcomes while
+              developing user interfaces.
+            </li>
+            <li>
+              Evaluated current potential solutions, proposing alternatives to
+              reduce downtime.
+            </li>
+            <li>Created documentation for knowledge sharing.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <h3>Jan 2023 - December 2024| Front-End</h3>
+          <p>Bitcorp Cybersecurity - Bristol</p>
+          <ul>
+            <li>
+              Developed plans to safeguard computer files against unauthorized
+              access or modifications.
+            </li>
+            <li>Performed risk analysis to identify vulnerabilities.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Skills Section -->
+      <div class="skills">
+        <div class="section-title">Skills</div>
+        <ul>
+          <li>Figma design</li>
+          <li>Problem-solving</li>
+          <li>Project Management</li>
+          <li>Exchange connectivity support</li>
+          <li>Data backup & restoration</li>
+          <li>Front-End</li>
+        </ul>
+      </div>
+
+      <!-- Education -->
+      <div class="education">
+        <div class="section-title">Education</div>
+        <div>
+          <h4>2024 | Management: Computer Science</h4>
+          <p>Koshi saint james college</p>
+        </div>
+        <div>
+          <h4>2023| Former School</h4>
+          <p>Shree Sajeelal Secondary Nepali Medium School</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact">
+      <div class="section-title">Contact & Social Media</div>
+      <div>
+        <a href="tel:9810567505"> <i class="fas fa-phone"></i> Phone </a>
+        <a
+          href="https://www.facebook.com/profile.php?id=61557396306228&sk=about"
+          target="_blank"
+        >
+          <i class="fab fa-facebook"></i> Facebook
+        </a>
+        <a
+          href="https://www.instagram.com/vimmagar_/profilecard/?igsh=a3MzNHVyN2cxMHg="
+          target="_blank"
+        >
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a
+          href="https://www.linkedin.com/in/vim-magar-143a50310/"
+          target="_blank"
+        >
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

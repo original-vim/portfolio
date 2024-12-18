@@ -1,0 +1,469 @@
+/* General Section Styling */
+section {
+  padding: 5rem 0;
+}
+
+/* Button Styling */
+.main-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.primary-btn {
+  background-color: #007bff; /* Blue */
+  color: #fff;
+  border: 1px solid #007bff;
+}
+
+.secondary-btn {
+  background-color: #ffffff; /* White */
+  color: #000000;
+  border: 1px solid #007bff;
+}
+
+.primary-btn:hover {
+  color: #007bff;
+  background-color: white;
+  box-shadow: 0 0 10px 2px #007bff; /* Glowing blue outline */
+  border: 2px solid #007bff; 
+}
+
+.secondary-btn:hover {
+  color: #f8f8f8;
+  background-color: rgba(25, 68, 243, 0.979);
+  box-shadow: 0 0 10px 2px #007bff; /* Glowing grey outline */
+  border: 2px solid #007bff; 
+}
+
+/* Heading Styling */
+h1 {
+  font-size: 4.375rem;
+  line-height: 3.75rem;
+  font-weight: 700;
+  color: var(--text-black);
+  margin-bottom: 1.25rem;
+  font-family: var(--primary-font);
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 3.4375rem;
+  font-weight: 500;
+  color: var(--text-black);
+  margin-bottom: 1.5625rem;
+  font-family: var(--primary-font);
+}
+
+h3 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 3.125rem;
+  color: var(--text-black);
+  margin-bottom: 0.9375rem;
+  font-family: var(--primary-font);
+  text-decoration: uppercase;
+}
+
+h5 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-black);
+  margin-bottom: 2.1875rem;
+}
+
+/* Paragraph Styling */
+p {
+  color: var(--text-gray);
+  font-size: 0.9375rem;
+  line-height: 1.65rem;
+  font-weight: 400;
+}
+
+/* Navbar Styling */
+.header_wrapper .navbar {
+  padding: 0.9375rem 0;
+  transition: all .2s linear;
+}
+
+.header_wrapper .navbar-brand img {
+  max-width: 10rem;
+  height: auto;
+}
+
+.header_wrapper .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.header_wrapper .nav-item {
+  margin: 0 0.625rem;
+}
+
+.header_wrapper .nav-item .nav-link {
+  font-family: var(--primary-font);
+  font-size: 0.9375rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--text-black);
+  display: inline-block;
+}
+
+.header_wrapper .nav-item .nav-link.active,
+.header_wrapper .nav-item .nav-link:hover {
+  color: rgb(23, 16, 243);
+}
+
+/* Header Scrolled Effect */
+.header-scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--bg-white);
+  box-shadow: 0 0.25rem 0.375rem rgba(12, 0, 46, .05);
+}
+
+/* Banner Section Styling */
+.banner_wrapper {
+  padding-top: 6.875rem;
+  z-index: 1;
+  background-image: url('/images/home-banner.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+.banner_wrapper .banner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center the text */
+  align-items: flex-start; /* Align text to the left */
+}
+
+.banner_wrapper .banner-content h2 {
+  position: relative; /* Needed for the ::after pseudo-element to position correctly */
+}
+
+.banner_wrapper .banner-content h2::after {
+  content: '';
+  width: 37%; /* Adjust the width as per your requirement */
+  height: 0.125rem;
+  position: absolute;
+  top: 100%; /* Position just below the text */
+  left: 0; /* Align to the left of the h2 */
+  background: black;
+  overflow-x: hidden;
+  transform: scaleX(0); /* Initially, the underline will not be visible */
+  transform-origin: left;
+  transition: transform 0.3s ease-out; /* Smooth transition */
+}
+
+.banner_wrapper .banner-content h2:hover::after {
+  transform: scaleX(1); /* Show the underline on hover */
+}
+
+/* Portfolio Section Styling */
+.portfolio .nav-link {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #333;
+  margin-right: 0.5rem;
+  border-radius: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.portfolio .nav-link.active {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.portfolio .nav-link:hover {
+  color: #fff;
+  background-color: #555;
+}
+
+/* Portfolio Items */
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.portfolio-img img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-hover {
+  opacity: 1;
+}
+
+.portfolio-hover .hover-text {
+  color: #fff;
+  text-align: center;
+}
+
+.portfolio-hover h5 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-hover p {
+  font-size: 0.875rem;
+}
+
+/* Services Section Styling */
+.services_wrapper .card {
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+  background-color: #f8f9fa; /* Default background */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Subtle default shadow */
+  border-radius: 10px; /* Slight rounding for aesthetic */
+}
+
+.services_wrapper .card:hover {
+  transform: scale(1.05); /* Slight scale-up effect */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Increased shadow */
+}
+
+.services_wrapper .card h5 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.services_wrapper .card p {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+/* General Contact Section Styling */
+.contact_wrapper {
+  position: relative;
+  padding: 80px 20px;
+  color: #fff;
+  background: url('/images/background.jpg') no-repeat center center/cover;
+}
+
+.contact_wrapper h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.contact_wrapper p {
+  font-size: 1rem;
+  color: #ddd;
+  margin-bottom: 40px;
+}
+
+/* Form Styling */
+.contact_form .form-control {
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact_form .form-control:hover,
+.contact_form .form-control:focus {
+  transform: scale(1.02);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact_form .btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact_form .btn-primary:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-2px);
+}
+
+/* Blog Section Styling */
+.blog-card {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.blog-card img {
+  width: 100%;
+  height: auto;
+}
+
+.blog-card-body {
+  padding: 15px;
+}
+
+.blog-card-body h5 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.blog-card-body p {
+  font-size: 0.875rem;
+  color: #666;
+}
+.social_icons {
+  display: flex;
+  flex-direction: row;
+  font-size: 29px;
+  gap: 60px;
+  justify-content: center; /* Center the icons horizontally */
+}
+
+/* Default styles for all social icons */
+.social_icons a {
+  color: #000; /* Default color */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transform */
+}
+
+/* Hover effect for Facebook */
+.social_icons a.facebook:hover {
+  color: #1877f2; /* Facebook blue */
+}
+
+/* Hover effect for YouTube */
+.social_icons a.youtube:hover {
+  color: #ff0000; /* YouTube red */
+}
+
+/* Generic hover effect for other icons */
+.social_icons a:hover {
+  color: #007bff; /* Change color on hover for other icons */
+  transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+/* Optional: Specific color for the icons when not hovered */
+.social_icons a {
+  color: #000; /* Default color for all icons */
+}
+
+
+
+
+/* Footer Styling */
+.footer {
+  background-color: #282c34;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .header_wrapper .nav-item .nav-link {
+      font-size: 0.8rem;
+  }
+
+  .banner_wrapper .banner-content h2 {
+      font-size: 2rem;
+  }
+
+  .portfolio-item {
+      margin-bottom: 1.5rem; /* Space between portfolio items */
+  }
+
+  .contact_wrapper {
+      padding: 40px 10px; /* Adjust padding for mobile */
+  }
+
+  .contact_form .form-control {
+      font-size: 0.9rem;
+  }
+
+  .contact_form .btn-primary {
+      font-size: 0.9rem;
+      padding: 8px 15px;
+  }
+  .social_icons{
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+  }
+  .footer {
+      font-size: 0.75rem;
+  }
+}
+
+/* Tablet Devices */
+@media (min-width: 768px) and (max-width: 992px) {
+  .banner_wrapper .banner-content h2 {
+      font-size: 3rem;
+  }
+
+  .services_wrapper .card {
+      margin: 1rem; /* Space between service cards */
+  }
+
+  .contact_form .form-control {
+      font-size: 1rem;
+  }
+
+  .contact_form .btn-primary {
+      font-size: 1rem;
+      padding: 10px 20px;
+  }
+
+  .footer {
+      font-size: 0.875rem;
+  }
+}
+
+/* Larger Devices */
+@media (min-width: 992px) {
+  .portfolio-item {
+      margin-bottom: 2rem; /* More space on larger screens */
+  }
+}
